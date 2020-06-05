@@ -352,8 +352,8 @@ where
     writeln!(w, "    }}")?;
     writeln!(w)?;
     writeln!(w, "    pub struct Error {{")?;
-    writeln!(w, "        param: String,")?;
-    writeln!(w, "        what: Box<dyn fmt::Debug>,")?;
+    writeln!(w, "        pub param: String,")?;
+    writeln!(w, "        pub what: Box<dyn fmt::Debug>,")?;
     writeln!(w, "    }}")?;
     writeln!(w)?;
     writeln!(w, "    impl fmt::Debug for Error {{")?;
