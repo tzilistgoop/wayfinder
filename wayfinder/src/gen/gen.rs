@@ -359,7 +359,7 @@ where
     writeln!(w, "    impl fmt::Debug for Error {{")?;
     writeln!(
         w,
-        "        fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {{"
+        "        fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {{"
     )?;
     writeln!(w, "            f.debug_struct(\"wayfinder::Error\")")?; // TODO: what here?
     writeln!(w, "                .field(\"param\", &self.param)")?;
@@ -371,7 +371,7 @@ where
     writeln!(w, "    impl fmt::Display for Error {{")?;
     writeln!(
         w,
-        "        fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {{"
+        "        fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {{"
     )?;
     writeln!(w, "            write!(")?;
     writeln!(w, "                f,")?;
