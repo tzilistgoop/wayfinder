@@ -328,7 +328,7 @@ where
     writeln!(w, "    impl<T: fmt::Debug> fmt::Debug for Match<T> {{")?;
     writeln!(
         w,
-        "        fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {{"
+        "        fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {{"
     )?;
     writeln!(w, "            match self {{")?;
     writeln!(
